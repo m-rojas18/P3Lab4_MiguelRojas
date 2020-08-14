@@ -1,7 +1,11 @@
 #include <iostream>
 #include <string>
+#include"Juego.cpp"
+#include "Jugador.cpp"
+ 
 using namespace std;
-friend  void Jugar(int);
+
+
 int main(){
     char seguir = 's';
     int opcion_user;
@@ -30,8 +34,11 @@ int main(){
                 cout << "Ingrese su nombre: ";
                 cin >> nombre_jugador;
                 cout << endl;
+                //Crear objeto jugador
+                Jugador* jug = new Jugador(nombre_jugador, 0);
                 //Llamar a metodo
-                Jugar(cantidad_jugadores);
+                Juego* juego = new Juego(jug);
+                juego->Jugar(cantidad_jugadores);
                 break;
             }
             case 2:{
@@ -44,6 +51,5 @@ int main(){
                 cout << "Ingreso una opcion no valida." << endl;
         }
     }
-    
     return 0;
 }

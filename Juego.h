@@ -1,20 +1,21 @@
-#include "Jugador.hpp"
+#include "Jugador.h"
 #include <vector>
+#ifndef JUEGO_H
+#define JUEGO_H
 using namespace std;
 class Juego {
-    friend void Jugar();
-    //Metodo Friend
-    friend void  Jugar(int);
     //Atributos
     public:
         vector<string> baraja;
-        vector<Jugador*> jugadores_partida;
+        vector<Jugador*> jugadores;
     
     public:
-        Juego();//Constructor
-        friend class Jugador;
-        void  Jugar(int);
+        Juego(Jugador*);//Constructor
+        void Jugar(int);
+        void revolverBaraja();
         void modificar_Puntuacion();
         void modificar_Mano_Jugador();
         ~Juego();//Destructor
 };
+
+#endif
