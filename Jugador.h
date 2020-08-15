@@ -8,16 +8,18 @@ class Jugador {
     //Atributos
     public:
         string nombre_jugador;
-        int puntacion;
+        int puntuacion;
         vector<string> mano_cartas;
     public:
         Jugador(string, int);//Constructor
         //Metodos
+        friend class Juego;
         string getNombre_jugador();
         int getPuntuacion();
-        vector<string> getMano_Cartas();
         int getTamano_mano();
+        void setPuntuacion(int);
         string getCarta(int);
+        void addCarta(string);
         ~Jugador();//Destructor
 };
 

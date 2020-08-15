@@ -11,10 +11,11 @@ class Juego {
     
     public:
         Juego(Jugador*);//Constructor
+        friend class Jugador;
         void Jugar(int);
-        void revolverBaraja();
-        void modificar_Puntuacion();
         void modificar_Mano_Jugador();
+        void get_Puntos();
+        int valorCarta(string);
         ~Juego();//Destructor
 };
 

@@ -9,6 +9,7 @@ using namespace std;
 int main(){
     char seguir = 's';
     int opcion_user;
+    cout << endl << "No termine la parte de la simulacion de los robots. " << endl;
     while(seguir == 's'){
         cout << "Menu Juego Lab 4 !!" << endl
         << "[1] Jugar 31" << endl
@@ -16,6 +17,8 @@ int main(){
         << "Seleccione una opcion: ";
         cin >> opcion_user; 
         cout << endl;
+        cout << endl;
+        
         switch(opcion_user){
             case 1:{
                 //Opcion Jugar
